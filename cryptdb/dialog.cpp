@@ -3,6 +3,7 @@
 // #include <QProcess>
 #include <QtCore>
 #include <QtGui>
+using namespace std;
 
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
@@ -21,18 +22,22 @@ void Dialog::on_pushButton_clicked()
 
     QProcess proc;
     // proc.setWorkingDirectory("~/");
-    // qDebug() << QDir::currentPath();
+    qDebug() << QDir::currentPath();
     proc.start("./main");
-    proc.waitForFinished();
 
-    QString s;
-    s = ui->textEdit->toPlainText();
-    s += "\n";
-    proc.write(qPrintable(s));
+    QString input;
+    input = ui->textEdit->toPlainText();
+    input += "\n";
+    qDebug() << qPrintable(input);
+    //string st = string((const char *)input.toLocal8Bit());
+    int a = proc.write(input.toAscii());
 
     // proc->close();
+    proc.waitForFinished();
+
     QByteArray str = proc.readAll();
-    ui->textEdit->setText( QString::fromLocal8Bit(str) );
+    ui->textEdit_output->clear();
+    ui->textEdit_output->setText( QString::fromLocal8Bit(str) );
     qDebug() << str;
     // ui->textEdit->setText( QDir::currentPath());
     // ui->label->setText(QString(out));
