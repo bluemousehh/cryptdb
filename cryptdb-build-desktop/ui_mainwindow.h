@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon Feb 20 13:30:04 2012
+** Created: Mon Feb 27 18:54:35 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -33,6 +33,8 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionStart_CryptDB;
+    QAction *actionConnect_C;
     QWidget *centralWidget;
     QHBoxLayout *horizontalLayout;
     QSplitter *splitter_3;
@@ -59,6 +61,10 @@ public:
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
         MainWindow->setDockOptions(QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks|QMainWindow::ForceTabbedDocks);
+        actionStart_CryptDB = new QAction(MainWindow);
+        actionStart_CryptDB->setObjectName(QString::fromUtf8("actionStart_CryptDB"));
+        actionConnect_C = new QAction(MainWindow);
+        actionConnect_C->setObjectName(QString::fromUtf8("actionConnect_C"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
@@ -109,6 +115,9 @@ public:
         MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
 
         menuBar->addAction(menuFile->menuAction());
+        menuFile->addAction(actionStart_CryptDB);
+        menuFile->addAction(actionConnect_C);
+        mainToolBar->addSeparator();
 
         retranslateUi(MainWindow);
 
@@ -118,8 +127,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        actionStart_CryptDB->setText(QApplication::translate("MainWindow", "Start CryptDB (&S)", 0, QApplication::UnicodeUTF8));
+        actionConnect_C->setText(QApplication::translate("MainWindow", "Connect (&C)", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("MainWindow", "PushButton", 0, QApplication::UnicodeUTF8));
-        menuFile->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
+        menuFile->setTitle(QApplication::translate("MainWindow", "File (&F)", 0, QApplication::UnicodeUTF8));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

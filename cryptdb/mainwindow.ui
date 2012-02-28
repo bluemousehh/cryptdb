@@ -62,8 +62,10 @@
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>File (&amp;F)</string>
     </property>
+    <addaction name="actionStart_CryptDB"/>
+    <addaction name="actionConnect_C"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -74,6 +76,7 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="toolBar">
@@ -87,6 +90,16 @@
     <bool>false</bool>
    </attribute>
   </widget>
+  <action name="actionStart_CryptDB">
+   <property name="text">
+    <string>Start CryptDB (&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionConnect_C">
+   <property name="text">
+    <string>Connect (&amp;C)</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

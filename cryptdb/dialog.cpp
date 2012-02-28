@@ -29,12 +29,10 @@ void Dialog::on_pushButton_clicked()
     input = ui->textEdit->toPlainText();
     input += "\n";
     qDebug() << qPrintable(input);
-    //string st = string((const char *)input.toLocal8Bit());
-    int a = proc.write(input.toAscii());
+    proc.write(input.toAscii());
 
     // proc->close();
     proc.waitForFinished();
-
     QByteArray str = proc.readAll();
     ui->textEdit_output->clear();
     ui->textEdit_output->setText( QString::fromLocal8Bit(str) );
