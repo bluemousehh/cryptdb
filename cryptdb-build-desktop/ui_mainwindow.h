@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon Feb 27 18:54:35 2012
+** Created: Thu Mar 1 20:51:54 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -21,11 +21,11 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QPlainTextEdit>
 #include <QtGui/QPushButton>
-#include <QtGui/QSplitter>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTableView>
 #include <QtGui/QToolBar>
 #include <QtGui/QTreeView>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -36,14 +36,17 @@ public:
     QAction *actionStart_CryptDB;
     QAction *actionConnect_C;
     QWidget *centralWidget;
-    QHBoxLayout *horizontalLayout;
-    QSplitter *splitter_3;
+    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout_2;
     QTreeView *treeView;
-    QSplitter *splitter_2;
+    QVBoxLayout *verticalLayout_2;
     QTableView *tableView;
-    QSplitter *splitter;
+    QHBoxLayout *horizontalLayout;
     QPlainTextEdit *plainTextEdit;
+    QVBoxLayout *verticalLayout;
     QPushButton *pushButton;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_2;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QToolBar *mainToolBar;
@@ -54,7 +57,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(633, 464);
+        MainWindow->resize(641, 459);
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -67,40 +70,68 @@ public:
         actionConnect_C->setObjectName(QString::fromUtf8("actionConnect_C"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        horizontalLayout = new QHBoxLayout(centralWidget);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        splitter_3 = new QSplitter(centralWidget);
-        splitter_3->setObjectName(QString::fromUtf8("splitter_3"));
-        splitter_3->setOrientation(Qt::Horizontal);
-        treeView = new QTreeView(splitter_3);
+        horizontalLayout_3 = new QHBoxLayout(centralWidget);
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        treeView = new QTreeView(centralWidget);
         treeView->setObjectName(QString::fromUtf8("treeView"));
-        splitter_3->addWidget(treeView);
-        splitter_2 = new QSplitter(splitter_3);
-        splitter_2->setObjectName(QString::fromUtf8("splitter_2"));
-        splitter_2->setOrientation(Qt::Vertical);
-        tableView = new QTableView(splitter_2);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-        splitter_2->addWidget(tableView);
-        splitter = new QSplitter(splitter_2);
-        splitter->setObjectName(QString::fromUtf8("splitter"));
-        splitter->setOrientation(Qt::Horizontal);
-        plainTextEdit = new QPlainTextEdit(splitter);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-        splitter->addWidget(plainTextEdit);
-        pushButton = new QPushButton(splitter);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        splitter->addWidget(pushButton);
-        splitter_2->addWidget(splitter);
-        splitter_3->addWidget(splitter_2);
 
-        horizontalLayout->addWidget(splitter_3);
+        horizontalLayout_2->addWidget(treeView);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        tableView = new QTableView(centralWidget);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
+
+        verticalLayout_2->addWidget(tableView);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        plainTextEdit = new QPlainTextEdit(centralWidget);
+        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
+
+        horizontalLayout->addWidget(plainTextEdit);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setSpacing(6);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        verticalLayout->addWidget(pushButton);
+
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        verticalLayout->addWidget(pushButton_3);
+
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        verticalLayout->addWidget(pushButton_2);
+
+
+        horizontalLayout->addLayout(verticalLayout);
+
+
+        verticalLayout_2->addLayout(horizontalLayout);
+
+
+        horizontalLayout_2->addLayout(verticalLayout_2);
+
+
+        horizontalLayout_3->addLayout(horizontalLayout_2);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 633, 26));
+        menuBar->setGeometry(QRect(0, 0, 641, 26));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         MainWindow->setMenuBar(menuBar);
@@ -129,7 +160,9 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
         actionStart_CryptDB->setText(QApplication::translate("MainWindow", "Start CryptDB (&S)", 0, QApplication::UnicodeUTF8));
         actionConnect_C->setText(QApplication::translate("MainWindow", "Connect (&C)", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("MainWindow", "PushButton", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("MainWindow", "Push", 0, QApplication::UnicodeUTF8));
+        pushButton_3->setText(QApplication::translate("MainWindow", "Undo", 0, QApplication::UnicodeUTF8));
+        pushButton_2->setText(QApplication::translate("MainWindow", "Submit Change", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MainWindow", "File (&F)", 0, QApplication::UnicodeUTF8));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

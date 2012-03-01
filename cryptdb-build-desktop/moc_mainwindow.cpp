@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Mon Feb 27 19:56:27 2012
+** Created: Thu Mar 1 20:51:58 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -33,6 +33,9 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x08,
       47,   11,   11,   11, 0x08,
+      78,   11,   11,   11, 0x08,
+     104,   11,   11,   11, 0x08,
+     130,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -40,6 +43,9 @@ static const uint qt_meta_data_MainWindow[] = {
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0on_actionStart_CryptDB_triggered()\0"
     "on_actionConnect_C_triggered()\0"
+    "on_pushButton_2_clicked()\0"
+    "on_pushButton_3_clicked()\0"
+    "on_pushButton_clicked()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -73,9 +79,12 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: on_actionStart_CryptDB_triggered(); break;
         case 1: on_actionConnect_C_triggered(); break;
+        case 2: on_pushButton_2_clicked(); break;
+        case 3: on_pushButton_3_clicked(); break;
+        case 4: on_pushButton_clicked(); break;
         default: ;
         }
-        _id -= 2;
+        _id -= 5;
     }
     return _id;
 }
